@@ -1,6 +1,5 @@
 @extends('layouts.main')
 @section('title', 'HDC Events')
 @section('content')
-    <h1>HDC Events.</h1>
-    <a href="/">Main Page.</a>
+    <h1>Create a Product!</h1>
 @endsection

@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('title', 'HDC Events')
 @section('content')
-    <h1>Main Page</h1>
+    <h1>Events Index Page!</h1>
     <img src="/img/banner.jpg" width=200px alt="Banner">
 
     <!-- Aqui eu estou utilizando o Blade do Laravel para aplicar condicionais -->

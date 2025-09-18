@@ -1,35 +1,21 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    $nome = "Kauan";
-    $idade = 21;
-    $arr = [11,22,33,44,55];
-    $nomes = ["Kauan", "Pedro", "Maria", "João"];
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\ProductController;
 
-    return view('welcome', 
-        [
-            'name' => $nome,
-            'age' => $idade, 
-            'occupation' => 'programmer',
-            'arr' => $arr,
-            'names' => $nomes,
-        ]);
-    // É possível passar várias variáveis para a view, mesmo de forma "crua/sem declarar", como em "profissao".
-});
+Route::get('/', [EventController::class, 'index']);
+Route::get('/events/create', [EventController::class, 'create']);
+Route::get('/events/read', [EventController::class, 'read']);
+Route::get('/events/update', [EventController::class, 'update']);
+Route::get('/events/delete', [EventController::class, 'delete']);
 
-Route::get('/contact', function () {
-    return view('contact');
-});
+Route::get('/products', [ProductController::class, 'index']);
+Route::get('/products/create', [ProductController::class, 'create']);
+Route::get('/products/read', [ProductController::class, 'read']);
+Route::get('/products/update', [ProductController::class, 'update']);
+Route::get('/products/delete', [ProductController::class, 'delete']);
 
-Route::get('/products', function () {
-
-    $busca = request('search');
-
-    return view('products', ['search' => $busca]);
-});
-
-Route::get('/products_test/{id?}', function ($id = null) {
-    return view('product', ['id' => $id]);
-});
+Route::get('/contacts', [ContactController::class, 'index']);

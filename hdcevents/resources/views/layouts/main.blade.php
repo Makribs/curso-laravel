@@ -18,7 +18,6 @@
     </head>
     <body>
         <header>
-            <h1>HEADER</h1>
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="collapse navbar-collapse" id="navbar">
                     <a href="/" class="navbar-brand">
@@ -29,7 +28,7 @@
                             <a href="/" class="nav-link">Events</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/" class="nav-link">Create Event</a>
+                            <a href="/events/create" class="nav-link">Create Event</a>
                         </li>
                         <li class="nav-item">
                             <a href="/" class="nav-link">Login</a>
