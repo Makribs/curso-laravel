@@ -10,19 +10,43 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
 
         <!-- CSS do Bootstrap -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-BT97aZsO5vYp6v0gmnCeuCRlKxH7K4c8O5V0c8mYg5jI3y5E6f5n3y5f5d5f5d5f5" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
         <!-- CSS da aplicação -->
         <link rel="stylesheet" href="/css/style.css">
         <script src="/js/scripts.js"></script>
     </head>
     <body>
-        <header>...</header>
+        <header>
+            <h1>HEADER</h1>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="collapse navbar-collapse" id="navbar">
+                    <a href="/" class="navbar-brand">
+                        <img src="/img/hdcevents_logo.svg" alt="HDC Events">
+                    </a>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">Create Event</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">Register</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
         <main>
             @yield('content')
         </main>
         <footer>
             <p>HDC Events &copy; 2025</p>
         </footer>
+        <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>-->
     </body>
 </html>

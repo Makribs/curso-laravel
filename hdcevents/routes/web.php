@@ -19,10 +19,17 @@ Route::get('/', function () {
     // É possível passar várias variáveis para a view, mesmo de forma "crua/sem declarar", como em "profissao".
 });
 
-Route::get('/contato', function () {
-    return view('contato');
+Route::get('/contact', function () {
+    return view('contact');
 });
 
-Route::get('/produtos', function () {
-    return view('produtos');
+Route::get('/products', function () {
+
+    $busca = request('search');
+
+    return view('products', ['search' => $busca]);
+});
+
+Route::get('/products_test/{id?}', function ($id = null) {
+    return view('product', ['id' => $id]);
 });
