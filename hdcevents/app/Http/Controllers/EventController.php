@@ -4,22 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+//Aqui estou fazendo um acesso ao Models, mais especificamente no Model de Evento;
+use App\Models\Event;
+
 class EventController extends Controller {
     public function index(){
-        $nome = "Kauan";
-        $idade = 21;
-        $arr = [11,22,33,44,55];
-        $nomes = ["Kauan", "Pedro", "Maria", "João"];
+        $events = Event::all();
 
-        return view('events.index', 
-            [
-                'name' => $nome,
-                'age' => $idade, 
-                'occupation' => 'programmer',
-                'arr' => $arr,
-                'names' => $nomes,
-            ]);
-        // É possível passar várias variáveis para a view, mesmo de forma "crua/sem declarar", como em "profissao".
+        return view('events.index', ['events' => $events]);
     }
 
     public function create(){
