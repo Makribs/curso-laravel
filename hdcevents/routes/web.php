@@ -9,6 +9,9 @@ use App\Http\Controllers\ProductController;
 Route::get('/', [EventController::class, 'index']);
 Route::get('/events/create', [EventController::class, 'create']);
 Route::get('/events/read', [EventController::class, 'read']);
+
+Route::post('/events', [EventController::class, 'store']);
+
 Route::get('/events/update', [EventController::class, 'update']);
 Route::get('/events/delete', [EventController::class, 'delete']);
 
