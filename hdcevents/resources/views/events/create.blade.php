@@ -21,7 +21,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="description">Local:</label>
+                <label for="description">Description:</label>
                 <textarea name="description" id="description" class="form-control" placeholder="Event description"></textarea>
             </div>
             <br>
