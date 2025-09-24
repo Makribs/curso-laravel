@@ -10,8 +10,12 @@
                 <input type="file" name="image" id="image" class="form-control-file" placeholder="Imagem">
             </div>
             <div class="form-group">
-                <label for="title">Event:</label>
+                <label for="title">Event title:</label>
                 <input type="text" name="title" id="title" class="form-control" placeholder="Event name">
+            </div>
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" name="date" id="date" class="form-control">
             </div>
             <div class="form-group">
                 <label for="city">City:</label>
