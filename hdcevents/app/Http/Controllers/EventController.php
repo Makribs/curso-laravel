@@ -38,9 +38,11 @@ class EventController extends Controller {
 
         return redirect('/')->with('msg', 'Evento criado com sucesso!');
     }
-    public function read(){
-        return view('events.read');
+    public function show($id){
+        $event = Event::findOrFail($id); //Encontra o evento ou falha, mostrando um erro 404
+        return view('events.show', ['event' => $event]);
     }
+
     public function update(){
         return view('events.update');
     }
