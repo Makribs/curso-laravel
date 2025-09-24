@@ -12,6 +12,12 @@
                 <p class="events-participants"><ion-icon name="people-outline"></ion-icon> X Participants</p>
                 <p class="event-owner"><ion-icon name="star-outline"></ion-icon> Event Owner:</p>
                 <a href="#" class="btn btn-primary" id="event-submit">Join in</a>
+                <h3>The event contains:</h3>
+                <ul id="items-list">
+                    @foreach ($event->items as $item)
+                    <li><ion-icon name="play-outline"></ion-icon> <span>{{ $item }}</span></li>
+                    @endforeach
+                </ul>
             </div>
             <div class="col-md-12" id="description-container">
                 <h3>About the event:</h3>
