@@ -13,6 +13,9 @@
         <h2>Upcoming Events</h2>
         <p>See the upcoming events of the next days!</p>
         <div id="cards-container" class="row">
+            @if (count($events) == 0)
+                <p>There's not available events...</p>
+            @endif
             @foreach ($events as $event)
                 <div class="card col-md-3">
                     <img src="/img/events/{{ $event->image }}" alt="{{ $event->title }}">
