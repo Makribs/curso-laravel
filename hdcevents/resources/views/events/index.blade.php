@@ -4,7 +4,7 @@
     
     <div id="search-container" class="col-md-12">
         <h1>Search for an event!</h1>
-        <form action="">
+        <form action="/" method="get">
             <input type="text" name="search" id="search" class="form-control" placeholder=Search...>>
         </form>
     </div>
