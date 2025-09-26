@@ -14,9 +14,11 @@
                 <a href="#" class="btn btn-primary" id="event-submit">Join in</a>
                 <h3>The event contains:</h3>
                 <ul id="items-list">
-                    @foreach ($event->items as $item)
-                    <li><ion-icon name="play-outline"></ion-icon> <span>{{ $item }}</span></li>
-                    @endforeach
+                    @forelse ($event->items as $item)
+                        <li><ion-icon name="play-outline"></ion-icon> <span>{{ $item }}</span></li>
+                    @empty
+                        <li>No itens.</li>
+                    @endforelse
                 </ul>
             </div>
             <div class="col-md-12" id="description-container">
