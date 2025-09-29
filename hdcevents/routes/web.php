@@ -23,3 +23,12 @@ Route::get('/products/update', [ProductController::class, 'update']);
 Route::get('/products/delete', [ProductController::class, 'delete']);
 */
 Route::get('/contacts', [ContactController::class, 'index']);
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
