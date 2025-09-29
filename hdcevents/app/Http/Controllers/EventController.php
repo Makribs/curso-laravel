@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 //Aqui estou fazendo um acesso ao Models, mais especificamente no Model de Evento;
 use App\Models\Event;
 
+use Illuminate\Support\Facades\Auth;
+
 class EventController extends Controller {
     public function index(){
         $search = request('search');
@@ -41,7 +43,10 @@ class EventController extends Controller {
             $requestImage->move(public_path('img/events'), $imageName);
             $event->image = $imageName;
         }
-       
+
+        $user = Auth::user();
+        $event->user_id = $user->id;
+
         $event->save();
 
         return redirect('/')->with('msg', 'Evento criado com sucesso!');

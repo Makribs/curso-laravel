@@ -23,4 +23,8 @@ class Event extends Model
     {
         return $value ? json_decode($value, true) : [];
     }
+
+    public function user(){
+        return $this->belongsTo('App\Models\User');
+    }
 }
