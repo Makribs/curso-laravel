@@ -10,7 +10,7 @@
                 <h1>{{ $event->title }}</h1>
                 <p class="event-city"><ion-icon name="location-outline"></ion-icon> {{ $event->city }}</p>
                 <p class="events-participants"><ion-icon name="people-outline"></ion-icon> X Participants</p>
-                <p class="event-owner"><ion-icon name="star-outline"></ion-icon> Event Owner:</p>
+                <p class="event-owner"><ion-icon name="star-outline"></ion-icon> Event Owner: {{ $eventOwner['name'] }}</p>
                 <a href="#" class="btn btn-primary" id="event-submit">Join in</a>
                 <h3>The event contains:</h3>
                 <ul id="items-list">
