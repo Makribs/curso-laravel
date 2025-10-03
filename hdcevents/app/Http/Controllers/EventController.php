@@ -28,6 +28,7 @@ class EventController extends Controller {
     public function create(){
         return view('events.create');
     }
+    
     public function store(Request $request){
         $event = new Event;
         $event->date = $request->date;
@@ -60,6 +61,12 @@ class EventController extends Controller {
         return view('events.show', ['event' => $event, 'eventOwner' => $eventOwner]);
     }
 
+    public function dashboard(){
+        $user = Auth::user();
+        $events = $user->events;
+
+        return view('events.dashboard', ['events' => $events]);
+    }
     public function update(){
         return view('events.update');
     }
