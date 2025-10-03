@@ -70,7 +70,9 @@ class EventController extends Controller {
     public function update(){
         return view('events.update');
     }
-    public function delete(){
-        return view('events.delete');
+    public function destroy($id){
+        Event::findOrFail($id)->delete();
+
+        return redirect('/dashboard')->with('msg', 'Event deleted successfully');
     }
 }
